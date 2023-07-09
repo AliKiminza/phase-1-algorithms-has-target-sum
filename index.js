@@ -1,11 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  // i = starting index from 0 and z = starting index from the end of the array
+  for (let i = 0 ; i < array.length;  i++) {
+  // inner loop starting from array index[i + 1]
+      for (let z = i + 1; z < array.length; z++) {
+        let sum = array[i] + array[z];
+        if (sum === target) {
+          return true;
+        }
+      }
+  
+  }
+
+  return false;
 }
 
 /* 
   Write the Big O time complexity of your function here
 */
-
+//O(n²)
 /* 
   Add your pseudocode here
 */
